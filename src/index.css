@@ -1,13 +1,227 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .Mainscreen */
+.main-container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.chatBox {
+	width: 80%;
+	height: auto;
+}
+.chatBox h2 {
+	padding: 1rem;
+}
+.user-and-group {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.students {
+	width: 35%;
+	height: auto;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+		0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+		0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+	border-radius: 10px;
+}
+.students h3 {
+	text-align: center;
+}
+.students tbody {
+	text-align: center;
+	font-weight: bold;
+}
+.students .studentName:hover {
+	cursor: pointer;
+}
+.students .deleteStudent:hover {
+	cursor: pointer;
+}
+.groups {
+	width: 40%;
+	height: auto;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+		0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+		0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+	border-radius: 10px;
+}
+.groups h3 {
+	text-align: center;
+}
+.group-list {
+	list-style: none;
+	text-align: center;
+}
+.addlogo {
+	width: 10%;
+	margin: 1rem auto;
+	display: flex;
+}
+.addlogo:hover {
+	cursor: pointer;
+}
+.groups thead tr th {
+	text-align: center;
+}
+.groups tr td {
+	text-align: center;
+}
+.deletelogo:hover {
+	cursor: pointer;
+}
+
+.groupname:hover {
+	cursor: pointer;
+}
+
+/* .chatScreen */
+.Chat-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
+.chatBox-container {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #ececec;
+}
+.group-name {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: auto;
+}
+.group-name h5 {
+	background-color: #00a5f7;
+	padding: 0.5rem;
+	color: white;
+	border-radius: 10px;
+}
+.chat-messages {
+	min-height: 75vh;
+	overflow: auto;
+	background-color: white;
+	padding: 0.5rem;
+}
+.incoming-text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.incoming-text p {
+	background-color: #ececec;
+	padding: 0.4rem;
+	width: 50%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.outgoing-text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.outgoing-text p {
+	background-color: #00a5f7;
+	color: white;
+	padding: 0.4rem;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.outgoing-text p:hover {
+	cursor: pointer;
+	background-color: #027bbc;
+}
+.outgoing-text h6 {
+	font-size: 0.7rem;
+	color: gray;
+	font-weight: normal;
+}
+.message-bar {
+	display: flex;
+	align-items: center;
+	height: auto;
+	padding: 0.5rem;
+	background-color: white;
+}
+.messagebox {
+	width: 87%;
+	margin-right: 0.5rem;
+}
+.message-bar input {
+	width: 100%;
+	padding: 0.5rem;
+}
+.message-bar input:focus {
+	outline: none;
+}
+.sendButton {
+	transition: 0.3s ease;
+}
+.attachButton {
+	transition: 0.3s ease;
+}
+.sendButton:hover {
+	cursor: pointer;
+	color: #00a5f7;
+}
+.attachButton:hover {
+	cursor: pointer;
+	color: #00a5f7;
+}
+.students-lists {
+	width: 30%;
+	min-height: 10vh;
+	background-color: #00a5f7;
+}
+.students-lists h5 {
+	text-align: center;
+	padding: 1rem;
+	color: white;
+	border-bottom: 1px solid #ececec;
+}
+.students-lists th {
+	text-align: center;
+	color: white;
+}
+.students-lists tbody tr td {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.students-lists .studentName:hover {
+	cursor: pointer;
+}
+.students-lists .deleteStudents:hover {
+	cursor: pointer;
+}
+.students-to-group tbody tr {
+	text-align: center;
+}
+.students-to-group tbody tr td {
+	width: 50%;
+}
+.students-to-group .addtogroup:hover {
+	cursor: pointer;
 }
